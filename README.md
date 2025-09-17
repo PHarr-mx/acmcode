@@ -1,2 +1,3 @@
-# acmcode
-ACM Code
+# ACM Code
+
+这个仓库是为了记录一下自己毕业后还写多少算法题
