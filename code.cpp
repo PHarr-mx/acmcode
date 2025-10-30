@@ -2,24 +2,12 @@
 
 using namespace std;
 
-long long f(long long n) {
-    if (n < 20180001) return n + 2017;
-    return f(f(n - 2018));
-}
 
 int main() {
-    long long n;
-    cin >> n;
-
-    long long t = 2018LL << 30;
-    long long p = 20180001 + 2018 * 3;
-    while (t >= 2018) {
-        while (n - t > p)
-            n -= t;
-        cerr << n << " " << t << endl;
-        t /= 2;
-    }
-    cerr << n << "\n";
-    cout << f(n) << endl;
+    double xa, xb, ya, yb;
+    cin >> xa >> ya >> xb >> yb;
+    double d1 = abs(xa - xb) + abs(ya - yb);
+    double d2 = sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb));
+    cout << fixed << setprecision(10) << abs(d1 - d2);
     return 0;
 }
